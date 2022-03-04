@@ -159,9 +159,25 @@ Choose *swap* and then on the confirmation dialog, press the *swap* button.
 
 This can often take a minute or two. There then should be a confirmation - close the dialog.
 
+Your application on the main URL should now look like this:
+
+![alt text](images/web-app-v2.png "Web App v2")
+
 ### Canary deployment
+This is a little different to a slot swap, but what we intend here is to use both slots and get app services to push a percentage of requests to the staging slot and then the remainder to the main production slot.
+
+This is done by choosing the main web application (not the staging one) and then alter the percentage to the staging and save.
+
+![alt text](images/deployment-slot-canary.png "Web App canary deployment")
+
+Once this has completed, the web application will serve a ratio of requests from clients. So, in the case above 25% will go to the staging slot and 75% to the main production slot. This can be tested, but this is best in incognito/InPrivate sessions as once one client hits one of the slots, it is sticky.
 
 ### Backing out a release
+This is straightfoward - it is essentially reversing the previous steps.
+1. If a full slot swap was done, then swap again
+2. If a canary style deployment, then you should then set the staging slot to now be 0%
+
+Check this out for yourself by doing some experiments. It may be useful to use new browser sessions for each test. 
 
 ## Injecting variables and secrets into a web app
 The plan:
