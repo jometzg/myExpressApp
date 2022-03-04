@@ -4,7 +4,7 @@ This workshop is a step-by-step guide to exploring the features of app services 
 This is based on our documentation here https://docs.microsoft.com/en-gb/azure/app-service/quickstart-nodejs?tabs=linux&pivots=development-environment-azure-portal
 
 What this workshop demonstrates is how to:
-1. Create a web app in the Azure portal
+1. [Create a web app in the Azure portal](#create-web-app)
 2. Create a sample app code on your machine (in Node.js)
 3. Test the sample app locally
 4. Deploy to your web app on Azure
@@ -19,7 +19,7 @@ What this workshop demonstrates is how to:
 3. Visual Studio Code with the Azure extension installed
 4. A version of Node.js 
 
-## Create a Web App
+(#create-web-app)## Create a Web App
 It may be a little confusing, but web apps in Azure come under the product "app services". This is because, there are several types of web app, but they all use a common infrastrcture. So, if you hear app services on Azure - these are web apps. There are other means of hosting web apps, but app services is the main one and is the subject of this workshop.
 
 ![alt text](images/create-web-app.png "Create a web app")
