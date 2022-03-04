@@ -35,9 +35,27 @@ Spend some time looking at some of the features of the web app. A list of the mo
 7. Diagnostic settings
 8. App Service logs
 9. Advanced tools - the Kudu console - SSH or Bash
-  Look at files
-  Curl http://ifconfig.co for outbound IP address
-  Nslookup
-  Ping
+  1. Look at files
+  2. Curl http://ifconfig.co for outbound IP address
+  3. Nslookup
+  4. Ping
 
+## Creating and building the demo app
+For this we are using node to create an Express demo app.
+
+1. Open up a command prompt into a new working directory/folder - name it what you like
+2. Check that node is alive 
+```javascript
+node --version
+```
+3. Create the Express app
+```javascript
+npx express-generator myExpressApp --view pug
+```
+4. This should have created an app in the folder *myExpressApp*
+5. cd to myExpressApp
+6. Build the app, getting its dependencies
+```javascript
+npm install
+```
 
