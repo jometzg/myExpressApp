@@ -126,3 +126,41 @@ To use deployment slots, there are several stages:
 5. Or, only send a percentage of requests to the new slot - sometimes known as a canary release
 6. Show that a deployment can be backed-out by swapping the slots again
 
+### Create a deployment slot "staging"
+
+
+### Amend application to represent a new release
+
+### Deploy to the "staging" slot
+
+### Check the main application
+
+### Swap slots
+
+### Canary deployment
+
+### Backing out a release
+
+## Injecting variables and secrets into a web app
+The plan:
+1. create a variable in the app that picks up an environment variable
+2. Update the app to display the variable
+3. Test locally by injecting it
+4. Upload the app to Azure
+5. Add an "Application Setting" for that environment variable and set its value
+6. Validate that the application setting gets picked up by the application
+
+This is good, but if this varable is really a secret - like a connection string, we can do better!
+
+## Using Azure Key Vault to hold secrets
+The plan:
+1. Create a key vault
+2. Create a secret of the same name as the environment variable from previous step (but different value)
+3. Enable the web app to access the KV by using managed identity (including RBAC to KV)
+4. Replace the application setting with a *key vault reference*
+5. Check application
+6. Look in Kudu at environment variables
+
+
+
+8. 
