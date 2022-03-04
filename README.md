@@ -84,5 +84,13 @@ Click on it:
 
 ![alt text](images/vscode-azure-web.png "VSCode Azure Web Apps")
 
+You should see your subscription and if you press the *>* arrow, it will then open and show a list of the web apps in that subscription. 
+1. Choose your web app from the earlier step and right click
+2. choose the item "Deploy to Web App..."
+3. Pick "Yes" if it asks if you want to build on the web app
+4. Pick "Deploy" - if you are sure
 
+![alt text](images/vscode-deploy.png "VSCode Deploy warning")
+
+6. Wait until it completes.
 
