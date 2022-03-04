@@ -5,9 +5,9 @@ This is based on our documentation here https://docs.microsoft.com/en-gb/azure/a
 
 What this workshop demonstrates is how to:
 1. [Create a web app in the Azure portal](#Create-a-Web-App)
-2. Create a sample app code on your machine (in Node.js)
+2. [Create a sample app code on your machine (in Node.js)](#Creating-and-building-the-demo-app)
 3. Test the sample app locally
-4. Deploy to your web app on Azure
+4. [Deploy to your web app on Azure](#Deploy-the-Express-application-to-an-Azure-Web-App)
 5. Validate it is working and inspect the deployed web app
 6. Demonstrate how to use deployment slots for blue/green deployments
 7. How to inject variables or secrets into your web app
