@@ -3,6 +3,16 @@ This workshop is a step-by-step guide to exploring the features of app services 
 
 This is based on our documentation here https://docs.microsoft.com/en-gb/azure/app-service/quickstart-nodejs?tabs=linux&pivots=development-environment-azure-portal
 
+What this workshop demonstrates is how to:
+1. Create a web app in the Azure portal
+2. Create a sample app code on your machine (in Node.js)
+3. Test the sample app locally
+4. Deploy to your web app on Azure
+5. Validate it is working and inspect the deployed web app
+6. Demonstrate how to use deployment slots for blue/green deployments
+7. How to inject variables or secrets into your web app
+8. How to use key vault to store a secret that the web app then uses
+
 ## Prerequisites
 1. Access to an Azure subscription or resource group with contributor rights.
 2. Command line in Windows/WSL or a Mac (this guide will concentrate on Windows, but it should be very similar in Linux (WSL) or a Mac
@@ -93,4 +103,6 @@ You should see your subscription and if you press the *>* arrow, it will then op
 ![alt text](images/vscode-deploy.png "VSCode Deploy warning")
 
 6. Wait until it completes.
+
+## Check that your application has deployed correctly
 
