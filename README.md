@@ -58,4 +58,15 @@ npx express-generator myExpressApp --view pug
 ```javascript
 npm install
 ```
+6. The application can be locally tested by:
+```javascript
+npm start
+```
+7. You should then see in a browser session at http://localhost:300 the Express default page:
+![alt text](images/express-home-page.png "Express app")
+
+But this is only now running locally, so let's upload this to our previously created web app.
+
+## Deploy the Express application to an Azure Web App
+
 
