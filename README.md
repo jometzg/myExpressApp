@@ -14,11 +14,20 @@ It may be a little confusing, but web apps in Azure come under the product "app 
 
 ![alt text](images/create-web-app.png "Create a web app")
 
+You need to have:
+1. A globally unique name
+2. Choose Node as the runtime
+3. Your favourite Azure region
+4. A service plan of at least an S1 type (this will be needed for later stages)
+
+Once deployed, your new app should have a holding page:
+![alt text](images/web-app-holding-page.png "Create a web app")
+
 ## A tour of app service features.
 
-If you don't have an app service (web app already created
-1. URL
-2. Metrics in the overview
+Spend some time looking at some of the features of the web app. A list of the more useful ones is shown below:
+1. Overview - URL
+2. Metrics
 3. Service plan
 4. Scale up and scale out
 5. Configuration/General Settings - can see the node version
@@ -26,9 +35,9 @@ If you don't have an app service (web app already created
 7. Diagnostic settings
 8. App Service logs
 9. Advanced tools - the Kudu console - SSH or Bash
-10. 	Look at files
-11. 	Curl ifocnfig.co for outbound IP address
-12. 	Nslookup
-13. 	Ping
+..1. Look at files
+..2. Curl ifocnfig.co for outbound IP address
+..3. Nslookup
+..4. Ping
 
 
