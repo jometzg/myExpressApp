@@ -133,7 +133,7 @@ The web app has a section "deployment slots". Choose this and then "Add Slot"
 
 You can name it anything you like, but *staging* is most meaningful in this context:
 
-![alt text](images/deployment-slot-default.png "Deployment slot staging")
+![alt text](images/deployment-slots-default.png "Deployment slot staging")
 
 ### Amend application to represent a new release
 In VS Code amend your app and then save it.
@@ -141,6 +141,11 @@ In VS Code amend your app and then save it.
 ![alt text](images/app-version-2.png "Amended app")
 
 ### Deploy to the "staging" slot
+This deploy is very similar to the previous deployment, but inside the Azure extension for VSCode, you navigate inside the web app using the *>* and then select your named slot (should be "staging")
+
+![alt text](images/vscode-deploy-to-slot.png "Deploy to slot from VSCode")
+
+Follow all of the questions until you can see that it has deployed.
 
 ### Check the main application
 
