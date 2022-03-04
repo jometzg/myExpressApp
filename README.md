@@ -12,6 +12,8 @@ This is based on our documentation here https://docs.microsoft.com/en-gb/azure/a
 ## Create a Web App
 It may be a little confusing, but web apps in Azure come under the product "app services". This is because, there are several types of web app, but they all use a common infrastrcture. So, if you hear app services on Azure - these are web apps. There are other means of hosting web apps, but app services is the main one and is the subject of this workshop.
 
+![alt text](images/create-web-app.png "Create a web app")
+
 ## A tour of app service features.
 
 If you don't have an app service (web app already created
