@@ -4,7 +4,7 @@ This workshop is a step-by-step guide to exploring the features of app services 
 This is based on our documentation here https://docs.microsoft.com/en-gb/azure/app-service/quickstart-nodejs?tabs=linux&pivots=development-environment-azure-portal
 
 What this workshop demonstrates is how to:
-1. [Create a web app in the Azure portal](## Create a Web App)
+1. [Create a web app in the Azure portal](#Create-a-Web-App)
 2. Create a sample app code on your machine (in Node.js)
 3. Test the sample app locally
 4. Deploy to your web app on Azure
