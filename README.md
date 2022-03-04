@@ -63,7 +63,7 @@ npm install
 npm start
 ```
 7. You should then see in a browser session at http://localhost:300 the Express default page:
-![alt text](images/express-home-page.png "Express app")
+![alt text](images/express-home.png "Express app")
 
 But this is only now running locally, so let's upload this to our previously created web app.
 
