@@ -148,8 +148,16 @@ This deploy is very similar to the previous deployment, but inside the Azure ext
 Follow all of the questions until you can see that it has deployed.
 
 ### Check the main application
+This should be no different as you should have deployed to the staging slot only.
+
+![alt text](images/web-app-test.png "Web App running")
 
 ### Swap slots
+Choose *swap* and then on the confirmation dialog, press the *swap* button.
+
+![alt text](images/web-app-slot-swap.png "Web App slot swap")
+
+This can often take a minute or two. There then should be a confirmation - close the dialog.
 
 ### Canary deployment
 
