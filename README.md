@@ -63,10 +63,26 @@ npm install
 npm start
 ```
 7. You should then see in a browser session at http://localhost:300 the Express default page:
+
 ![alt text](images/express-home.png "Express app")
 
 But this is only now running locally, so let's upload this to our previously created web app.
 
 ## Deploy the Express application to an Azure Web App
+If you have Visual Studio Code (VSCode) installed, the simplest way of lauching it from the command line is to:
+```
+code .
+```
+
+You should then VSCode launch in the correct folder:
+
+![alt text](images/vscode.png "VSCode")
+
+If you have the Azure extension installed, there should be an "A" icon down the left side of VSCode. 
+
+Click on it:
+
+![alt text](images/vscode-azure-web.png "VSCode Azure Web Apps")
+
 
 
