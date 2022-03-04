@@ -127,9 +127,18 @@ To use deployment slots, there are several stages:
 6. Show that a deployment can be backed-out by swapping the slots again
 
 ### Create a deployment slot "staging"
+The web app has a section "deployment slots". Choose this and then "Add Slot"
 
+![alt text](images/create-deployment-slot.png "Create deployment slot staging")
+
+You can name it anything you like, but *staging* is most meaningful in this context:
+
+![alt text](images/deployment-slot-default.png "Deployment slot staging")
 
 ### Amend application to represent a new release
+In VS Code amend your app and then save it.
+
+![alt text](images/app-version-2.png "Amended app")
 
 ### Deploy to the "staging" slot
 
