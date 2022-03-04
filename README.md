@@ -105,4 +105,24 @@ You should see your subscription and if you press the *>* arrow, it will then op
 6. Wait until it completes.
 
 ## Check that your application has deployed correctly
+You can now go back to the Azure portal and on the Overview click the "URL"
+
+![alt text](images/web-app-url.png "Azure portal Wb App Overview")
+
+which show show the web app exactly like it was when running locally.
+
+![alt text](images/web-app-test.png "Web App running")
+
+Congratulations. You now have your app on Azure!
+
+## Blue/Green Deployments using Deployment Slots
+We now want to be able to deploy our application safely. Azure app services has the notion of *deployment slots*. These allow deployments to be made to another *slot* not directly impacting the main production web site. This is documented here https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots
+
+To use deployment slots, there are several stages:
+1. Create a deployment slot for our web application. 
+2. Amend our application so this can represent a new version or release of our software
+3. Deploy this version to the deployment slot
+4. Either *swap* the slots - for a full deployment to tyhe new version
+5. Or, only send a percentage of requests to the new slot - sometimes known as a canary release
+6. Show that a deployment can be backed-out by swapping the slots again
 
