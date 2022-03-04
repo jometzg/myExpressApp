@@ -35,9 +35,9 @@ Spend some time looking at some of the features of the web app. A list of the mo
 7. Diagnostic settings
 8. App Service logs
 9. Advanced tools - the Kudu console - SSH or Bash
-..1. Look at files
-..2. Curl ifocnfig.co for outbound IP address
-..3. Nslookup
-..4. Ping
+  1. Look at files
+  2. Curl ifocnfig.co for outbound IP address
+  3. Nslookup
+  4. Ping
 
 
