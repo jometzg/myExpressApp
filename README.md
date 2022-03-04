@@ -33,6 +33,7 @@ You need to have:
 Once deployed, your new app should have a holding page:
 ![alt text](images/web-app-holding-page.png "Create a web app")
 
+
 ## A tour of app service features
 
 Spend some time looking at some of the features of the web app. A list of the more useful ones is shown below:
@@ -49,6 +50,7 @@ Spend some time looking at some of the features of the web app. A list of the mo
   2. Curl http://ifconfig.co for outbound IP address
   3. Nslookup
   4. Ping
+
 
 ## Creating and building the demo app
 For this we are using node to create an Express demo app.
@@ -77,6 +79,7 @@ npm start
 ![alt text](images/express-home.png "Express app")
 
 But this is only now running locally, so let's upload this to our previously created web app.
+
 
 ## Deploy the Express application to an Azure Web App
 If you have Visual Studio Code (VSCode) installed, the simplest way of lauching it from the command line is to:
@@ -114,6 +117,7 @@ which show show the web app exactly like it was when running locally.
 ![alt text](images/web-app-test.png "Web App running")
 
 Congratulations. You now have your app on Azure!
+
 
 ## Blue/Green Deployments using Deployment Slots
 We now want to be able to deploy our application safely. Azure app services has the notion of *deployment slots*. These allow deployments to be made to another *slot* not directly impacting the main production web site. This is documented here https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots
@@ -179,6 +183,7 @@ This is straightfoward - it is essentially reversing the previous steps.
 
 Check this out for yourself by doing some experiments. It may be useful to use new browser sessions for each test. 
 
+
 ## Injecting variables and secrets into a web app
 The plan:
 1. create a variable in the app that picks up an environment variable
@@ -188,7 +193,8 @@ The plan:
 5. Add an "Application Setting" for that environment variable and set its value
 6. Validate that the application setting gets picked up by the application
 
-This is good, but if this varable is really a secret - like a connection string, we can do better!
+This is good, but if this varable is really a secret, such as a connection string, we can do better!
+
 
 ## Using Azure Key Vault to hold secrets
 The plan:
@@ -199,6 +205,3 @@ The plan:
 5. Check application
 6. Look in Kudu at environment variables
 
-
-
-8. 
