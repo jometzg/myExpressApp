@@ -5,13 +5,13 @@ This is based on our documentation here https://docs.microsoft.com/en-gb/azure/a
 
 What this workshop demonstrates is how to:
 1. [Create a web app in the Azure portal](#Create-a-Web-App)
-2. [Create a sample app code on your machine (in Node.js)](#Creating-and-building-the-demo-app)
-3. Test the sample app locally
+2. [A tour of app services](#A-tour-of-app-service-features)
+3. [Create a sample app code on your machine (in Node.js)](#Creating-and-building-the-demo-app)
 4. [Deploy to your web app on Azure](#Deploy-the-Express-application-to-an-Azure-Web-App)
-5. Validate it is working and inspect the deployed web app
-6. Demonstrate how to use deployment slots for blue/green deployments
-7. How to inject variables or secrets into your web app
-8. How to use key vault to store a secret that the web app then uses
+5. [Validate it is working and inspect the deployed web app](#Check-that-your-application-has-deployed-correctly)
+6. [Demonstrate how to use deployment slots for blue/green deployments](#Blue/Green-Deployments-using-Deployment-Slots)
+7. [How to inject variables or secrets into your web app](#Injecting-variables-and-secrets-into-a-web-app)
+8. [How to use key vault to store a secret that the web app then uses](#Using-Azure-Key-Vault-to-hold-secrets)
 
 ## Prerequisites
 1. Access to an Azure subscription or resource group with contributor rights.
@@ -33,7 +33,7 @@ You need to have:
 Once deployed, your new app should have a holding page:
 ![alt text](images/web-app-holding-page.png "Create a web app")
 
-## A tour of app service features.
+## A tour of app service features
 
 Spend some time looking at some of the features of the web app. A list of the more useful ones is shown below:
 1. Overview - URL
