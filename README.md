@@ -75,7 +75,7 @@ Spend some time looking at some of the features of the web app. A list of the mo
 
 9. Diagnostic settings
 
-![alt text](images/web-app-diagnostic-settings.png "web app diagnostic settings")
+![alt text](images/web-app-diagnostric-settings.png "web app diagnostic settings")
 
 10. App Service logs
 
@@ -87,7 +87,7 @@ Spend some time looking at some of the features of the web app. A list of the mo
 
   1. Look at files
 
-![alt text](images/web-app-bash.png "web app bash console")
+![alt text](images/web-app-bash-ls.png "web app bash console")
 
   2. Curl http://ifconfig.co for outbound IP address
   3. Nslookup
