@@ -332,6 +332,33 @@ Then press *Add* to add this principal. Then press *Save* to Save this:
 So, now we have a secret in key vault and our web application is allowed to read that secret. So, now we need to configure the web app to use that secret.
 
 ### Configure web app to use a key vault secret
+To allow a web app to use a key vault secret, there is a special syntax for an application setting that references the key vault. So instead of using the value of the application setting, it refers to a key vault.
+
+The syntax is of the form below:
+```
+@Microsoft.KeyVault(SecretUri=https://your-key-vault-name.vault.azure.net/secrets/your-secret-name/)
+```
+So, in the web app, go back to Application Settings and replicate the value of the *TITLE* setting to the key vault reference. In the screen grab below, I have used "Advanced edit" and replaced the value of TITLE with the reference to key vault secret TITLE.
+
+![alt text](images/set-key-vault-in-web-app.png "set key vault reference in web app")
+
+Once this has saved, you then should see something like below:
+
+![alt text](images/set-key-vault-in-web-app-completed.png "set key vault reference in web app")
+
+Notice, that the *Source* field has been replaced by "key vault Reference". After a few seconds, there should be a green tick on this. This indicates that the web app could reference the key vault secret. If this is in red, the you need to check your key vault reference.
+
+Once complete, your application should display the new secret value from key vault.
+
+![alt text](images/app-with-key-vault-reference.png "App with key vault secret")
+
+Here, I chose a different name from that of the previous application setting for *TITLE* to make sure that it was being pulled from key vault.
+
+Just to reiterate, key vault would normally be used for things like connection strings and these would not normally be displayed on the user interface.
+
+Congratulations. The workshop is complete.
+
+# What we have learnt
 
 
 
