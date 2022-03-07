@@ -16,7 +16,7 @@ What this workshop demonstrates is how to:
 ## Prerequisites
 1. Access to an Azure subscription or resource group with contributor rights.
 2. Command line in Windows/WSL or a Mac (this guide will concentrate on Windows, but it should be very similar in Linux (WSL) or a Mac
-3. Visual Studio Code with the Azure extension installed
+3. Visual Studio Code with the *Azure Tools* extension installed (this extension is published by Microsoft)
 4. A version of Node.js 
 
 ## Create a Web App
@@ -260,7 +260,9 @@ This is good, but if this varable is really a secret, such as a connection strin
 
 
 ## Using Azure Key Vault to hold secrets
-The plan:
+To recap so far. We have a web app deployed into app services and we can inject variables. Having these values set in *Application Settings* is much better than having these directly in code - especially so for secrets. But someone with access to the web application in the Azure portal could then read this value. Not ideal if this is a secret.
+
+In this section, the plan is to use an Azure service called *key vault* to store a secret and then to configure the web app to use this value. Here are the steps we will go through:
 1. Create a key vault
 2. Create a secret of the same name as the environment variable from previous step (but different value)
 3. Enable the web app to access the KV by using managed identity (including RBAC to KV)
@@ -268,3 +270,15 @@ The plan:
 5. Check application
 6. Look in Kudu at environment variables
 
+Let's start.
+
+### Create a key vault
+A key vault is, like its name suggests, a place for holding secrets. A key vault is a separate Azure service that needs to be provisioned and later configured.
+
+Search for "key vault":
+
+![alt text](images/search-key-vault.png "Search for key vault")
+
+Choose key vault and *Create*:
+
+![alt text](images/create-key-vault.png "Create key vault")
