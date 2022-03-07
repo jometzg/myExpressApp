@@ -38,18 +38,62 @@ Once deployed, your new app should have a holding page:
 
 Spend some time looking at some of the features of the web app. A list of the more useful ones is shown below:
 1. Overview - URL
+
+![alt text](images/web-app-overview.png "web app overview")
+
 2. Metrics
+
+![alt text](images/web-app-metrics.png "web app metrics")
+
+![alt text](images/service-plan-metrics.png "service plan metrics")
+
 3. Service plan
+
+![alt text](images/service-plan-overview.png "service plan overview")
+
 4. Scale up and scale out
+
+![alt text](images/service-plan-scale-up.png "service plan scale up")
+
+![alt text](images/service-plan-scale-out.png "service plan scale out")
+
 5. Configuration/General Settings - can see the node version
-6. Log stream
-7. Diagnostic settings
-8. App Service logs
-9. Advanced tools - the Kudu console - SSH or Bash
+
+![alt text](images/web-app-general.png "web app general settings")
+
+6. Application settings
+
+![alt text](images/web-app-settings.png "web app application settings")
+
+7. Deployment slots
+
+![alt text](images/web-app-deployment.png "web app deployment slots")
+
+8. Log stream
+
+![alt text](images/web-app-log-stream.png "web app log stream")
+
+9. Diagnostic settings
+
+![alt text](images/web-app-diagnostic-settings.png "web app diagnostic settings")
+
+10. App Service logs
+
+![alt text](images/web-app-logs.png "web app logs")
+
+11. Advanced tools - the Kudu console
+
+![alt text](images/web-app-advanced-tools.png "web app advanced tools")
+
   1. Look at files
+
+![alt text](images/web-app-bash.png "web app bash console")
+
   2. Curl http://ifconfig.co for outbound IP address
   3. Nslookup
   4. Ping
+
+![alt text](images/web-app-ssh.png "web app SSH console")
 
 
 ## Creating and building the demo app
