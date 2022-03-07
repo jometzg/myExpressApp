@@ -107,7 +107,7 @@ You should see your subscription and if you press the *>* arrow, it will then op
 
 6. Wait until it completes.
 
-For more explanation on what is happening above, the Azure app service can take deployments built elsewhere - in development environments or in DevOps pipelines or it can perform these build steps on its own. In this way, app services can work directly with code repositories. In general, it is more common for applications to be built externally and the pre-built artifacts to be deployed.
+> For more explanation on what is happening above, the Azure app service can take deployments built elsewhere - in development environments or in DevOps pipelines or it can perform these build steps on its own. In this way, app services can work directly with code repositories. In general, it is more common for applications to be built externally and the pre-built artifacts to be deployed.
 
 ## Check that your application has deployed correctly
 You can now go back to the Azure portal and on the Overview click the "URL"
