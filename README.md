@@ -87,7 +87,7 @@ If you have Visual Studio Code (VSCode) installed, the simplest way of lauching 
 code .
 ```
 
-You should then VSCode launch in the correct folder:
+You should then launch VSCode in the correct folder:
 
 ![alt text](images/vscode.png "VSCode")
 
