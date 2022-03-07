@@ -297,6 +297,17 @@ Name your secret *TITLE*. It does not need to be named the same as the previous 
 So, we now have a key vault and secret with a value.
 
 ### Enable web app to access the secret
+Key vault is a separate service and an application needs to be able to access key vault. Key vault uses Azure AD to authenticate, so there needs to be an identity that can be used to access the key vault. 
+
+The simplest approach is to enable *managed identity* from the web app to give it an identity which key vault can use.
+
+Go to the web app and find the *identity* menu.
+
+![alt text](images/enable-managed-identity.png "Create managed identity")
+
+This then creates and Azure AD indentity for the application which the key vault will later be able to accept.
+
+![alt text](images/managed-identity-enabled.png "Created managed identity")
 
 
 
