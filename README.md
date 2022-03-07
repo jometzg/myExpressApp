@@ -301,13 +301,38 @@ Key vault is a separate service and an application needs to be able to access ke
 
 The simplest approach is to enable *managed identity* from the web app to give it an identity which key vault can use.
 
-Go to the web app and find the *identity* menu.
+Go to the web app and find the *identity* menu. Enable the system assigned managed identity by pressing *On* and *Save*
 
 ![alt text](images/enable-managed-identity.png "Create managed identity")
 
 This then creates and Azure AD indentity for the application which the key vault will later be able to accept.
 
 ![alt text](images/managed-identity-enabled.png "Created managed identity")
+
+So, now we have an Azure AD identity that represents the application. Next to configure access from the web app to the key vault.
+
+In the key vault, select *Access Policies*:
+
+![alt text](images/access-policy.png "Key vault access policy")
+
+Next, press *Add Access Policy*:
+
+Here, you are going to add an access policy of being able to read secrets. So choose secrets and in its dropdown, only select *Get*
+
+![alt text](images/add-access-policy.png "Key vault add access policy")
+
+Next press the line "none-selected for "Select Principal". A *principal* is essentially the user and this in our context is the managed identity of the web app we created earlier. So in the search list, search for the name of your web app (because the system assigned managed identity is named the same as the web app).
+
+![alt text](images/access-policy-add-principal.png "Key vault add access policy")
+
+Then press *Add* to add this principal. Then press *Save* to Save this:
+
+![alt text](images/save-access-policy.png "Save access policy")
+
+So, now we have a secret in key vault and our web application is allowed to read that secret. So, now we need to configure the web app to use that secret.
+
+### Configure web app to use a key vault secret
+
 
 
 
