@@ -74,7 +74,7 @@ npm install
 ```javascript
 npm start
 ```
-7. You should then see in a browser session at http://localhost:300 the Express default page:
+7. You should then see in a browser session at http://localhost:3000 the Express default page:
 
 ![alt text](images/express-home.png "Express app")
 
@@ -185,13 +185,76 @@ Check this out for yourself by doing some experiments. It may be useful to use n
 
 
 ## Injecting variables and secrets into a web app
-The plan:
+This simplest route to injecting variables into your app code is to use *environment variables* these can be then set at a command prompt before running your app and the app can then be amended to pick up a value from an environment variable. App services uses this mechanism to allow you to set a variable in the Azure portal and for your application to the pick it up and use it. 
+
+The same mechanism may be used for *secrets*, such as connection strings to databases.
+
+The steps are:
 1. create a variable in the app that picks up an environment variable
 2. Update the app to display the variable
 3. Test locally by injecting it
 4. Upload the app to Azure
 5. Add an "Application Setting" for that environment variable and set its value
 6. Validate that the application setting gets picked up by the application
+
+### Create an environment variable
+This is only needed to be able to locally test the application before deployment. It will not get used by the app service, becasue it is local to your machine.
+
+How to create an environment variable and set its value will depend on which operating system:
+```
+## Windows
+set TITLE=john
+
+## Linux
+TITLE=john
+```
+Now let's use it.
+
+### Update application to display the environment variable's value
+You can do almost anything here, but a simple change to our sample application is to update its controller for its main route, so the file *routes/index.js*
+
+```javascript
+var express = require('express');
+var router = express.Router();
+var titletext = process.env.TITLE
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: titletext });
+});
+
+module.exports = router;
+```
+This creates a variable *titletext* and sets its value to that of the environment variable *TITLE*.
+
+### Test locally
+You can run the application with:
+```
+npm start
+```
+Then validate that the output has changed
+
+![alt text](images/env-variable-local.png "Local with env variable TITLE set to John")
+
+### Upload the application
+This is exactly the same process as earlier, going into VSCode and deploying the application from there.
+
+![alt text](images/env-variable-web-app.png "Uploaded")
+
+But there's a problem! We have not set the environment variable for the web application. So let's do that next...
+
+### Set Application Setting
+In an app service, the environment variables can be injected into the app runtime by values in *Application Settings*.
+
+Go to Configuration/Application Settings and add a "New Application Setting" called "TITLE" and set its value:
+
+![alt text](images/web-app-set-env-variable.png "Set an Application Setting")
+
+Make sure to also hit "Save" after this dialog. It may also be necessary to *Restart* the web application after this
+
+### Web app with application setting correctly set.
+
+![alt text](images/env-variable-web-app-set.png "Resultant web application")
 
 This is good, but if this varable is really a secret, such as a connection string, we can do better!
 
