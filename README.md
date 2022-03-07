@@ -107,6 +107,8 @@ You should see your subscription and if you press the *>* arrow, it will then op
 
 6. Wait until it completes.
 
+For more explanation on what is happening above, the Azure app service can take deployments built elsewhere - in development environments or in DevOps pipelines or it can perform these build steps on its own. In this way, app services can work directly with code repositories. In general, it is more common for applications to be built externally and the pre-built artifacts to be deployed.
+
 ## Check that your application has deployed correctly
 You can now go back to the Azure portal and on the Overview click the "URL"
 
@@ -275,6 +277,8 @@ Let's start.
 ### Create a key vault
 A key vault is, like its name suggests, a place for holding secrets. A key vault is a separate Azure service that needs to be provisioned and later configured.
 
+For the purposes of this workshop, we are going to create a key vault and just put a simple text value as a secret in the key vault. In normal use, user access to the key vault would be more restricted to enforce a division of responsibilities from those that create and manage secrets from those that either deploy or operationally manage applications.
+
 Search for "key vault":
 
 ![alt text](images/search-key-vault.png "Search for key vault")
@@ -305,7 +309,7 @@ Go to the web app and find the *identity* menu. Enable the system assigned manag
 
 ![alt text](images/enable-managed-identity.png "Create managed identity")
 
-This then creates and Azure AD indentity for the application which the key vault will later be able to accept.
+This then creates and Azure AD identity for the application which the key vault will later be able to accept.
 
 ![alt text](images/managed-identity-enabled.png "Created managed identity")
 
