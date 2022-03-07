@@ -359,7 +359,9 @@ Just to reiterate, key vault would normally be used for things like connection s
 Congratulations. The workshop is complete.
 
 # What we have learnt
+In this small workshop, we have built a small Node.js application and uploaded this to an Azure web application. We have seen how we can use the notion of *deployment slots* to do safe deployments of our web apps - either in blue-green mode or canary-style releases. We have also seen how variables can be injected into our web apps and how there Azure app service configures these. Finally, for secret variables, we have used Azure Key Vault to store a secret and how to configure the web app to make use of a key vault secret.
 
+App services also has a rich set of other features that may also be easily used to enhance an application.
 
 
 
