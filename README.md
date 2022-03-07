@@ -282,3 +282,21 @@ Search for "key vault":
 Choose key vault and *Create*:
 
 ![alt text](images/create-key-vault.png "Create key vault")
+
+There is not much interesting here. You need a unique name and you need to decide in which resource group and region for deployment. One choice is to put the key vault in the same resource group as the app and it is recommended this is in the same region.
+
+### Create a secret in the key vault
+Inside the key vault in the Azure portal, select *Secrets" on the left menu and then *Generate/Import*
+
+![alt text](images/generate-secret.png "Generate/Import secret")
+
+![alt text](images/create-secret.png "Create secret")
+
+Name your secret *TITLE*. It does not need to be named the same as the previous application setting, but I have named this for convenience. Don't forget to set a value for the secret too.
+
+So, we now have a key vault and secret with a value.
+
+### Enable web app to access the secret
+
+
+
