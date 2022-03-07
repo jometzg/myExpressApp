@@ -126,7 +126,7 @@ To use deployment slots, there are several stages:
 1. Create a deployment slot for our web application. 
 2. Amend our application so this can represent a new version or release of our software
 3. Deploy this version to the deployment slot
-4. Either *swap* the slots - for a full deployment to tyhe new version
+4. Either *swap* the slots - for a full deployment to the new version
 5. Or, only send a percentage of requests to the new slot - sometimes known as a canary release
 6. Show that a deployment can be backed-out by swapping the slots again
 
