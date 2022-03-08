@@ -38,7 +38,7 @@ Once deployed, your new app should have a holding page:
 
 Spend some time looking at some of the features of the web app. A list of the more common ones is shown below:
 
-1. Overview - URL
+### Overview
 
 The overview sestion shows some important values:
 * URL - the URL of the web app
@@ -49,7 +49,7 @@ The overview sestion shows some important values:
 
 ![alt text](images/web-app-overview.png "web app overview")
 
-2. Metrics
+### Metrics
 
 These are the web app metrics
 
@@ -59,13 +59,13 @@ As a service plan is the compute, this has metrics that are easy to understand l
 
 ![alt text](images/service-plan-metrics.png "service plan metrics")
 
-3. Service plan
+### Service plan
 
 A service plan is the compute for the web app. It will have a SKU and number of instances. Note that there are Windows and Linux service plans. A service plan can be either Windows or Linux. Not both. 
 
 ![alt text](images/service-plan-overview.png "service plan overview")
 
-4. Scale up and scale out
+### Scale up and scale out
 
 There are two ways a service plan (and therefore all of the web apps in that plan) can scale - by selecting the SKU or type of underlying compute or the number of instances.
 
@@ -79,7 +79,7 @@ Scaling can be done manually or automatically - this can be configured here.
 
 ![alt text](images/service-plan-scale-out.png "service plan scale out")
 
-5. Configuration/General Settings 
+### Configuration/General Settings 
 
 This displays a number of settings. The most interesting ones are:
 * The runtime language and version
@@ -88,31 +88,31 @@ This displays a number of settings. The most interesting ones are:
 
 ![alt text](images/web-app-general.png "web app general settings")
 
-6. Application settings
+### Application settings
 
 These show some setting and connection strings that can be pushed down into the application. Thus enabling the removal of settings, credentials or secrets from the application code.
 
 ![alt text](images/web-app-settings.png "web app application settings")
 
-7. Deployment slots
+### Deployment slots
 
 A mechanism to allow safe deployment mechanisms by creating a copy of the web app that can be used in load balanced requests. This can enable blue/green or canary deployments.
 
 ![alt text](images/web-app-deployment.png "web app deployment slots")
 
-8. Log stream
+### Log stream
 
 ![alt text](images/web-app-log-stream.png "web app log stream")
 
-9. Diagnostic settings
+### Diagnostic settings
 
 ![alt text](images/web-app-diagnostric-settings.png "web app diagnostic settings")
 
-10. App Service logs
+### App Service logs
 
 ![alt text](images/web-app-logs.png "web app logs")
 
-11. Advanced tools - the Kudu console
+### Advanced tools - the Kudu console
 
 ![alt text](images/web-app-advanced-tools.png "web app advanced tools")
 
@@ -125,6 +125,7 @@ A mechanism to allow safe deployment mechanisms by creating a copy of the web ap
   4. Ping
 
 ![alt text](images/web-app-ssh.png "web app SSH console")
+
 
 
 ## Creating and building the demo app
