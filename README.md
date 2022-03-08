@@ -36,8 +36,14 @@ Once deployed, your new app should have a holding page:
 
 ## A tour of app service features
 
-Spend some time looking at some of the features of the web app. A list of the more useful ones is shown below:
+Spend some time looking at some of the features of the web app. A list of the more common ones is shown below:
+
 1. Overview - URL
+The overview sestion shows some important values:
+* URL - the URL of the web app
+* the app service plan name with its SKU and number of instances. This is the compute that runs the web app
+* Location - which region the web app runs in
+* Resource group of the resource
 
 ![alt text](images/web-app-overview.png "web app overview")
 
