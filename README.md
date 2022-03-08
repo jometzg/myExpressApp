@@ -39,6 +39,7 @@ Once deployed, your new app should have a holding page:
 Spend some time looking at some of the features of the web app. A list of the more common ones is shown below:
 
 1. Overview - URL
+
 The overview sestion shows some important values:
 * URL - the URL of the web app
 * the app service plan name with its SKU and number of instances. This is the compute that runs the web app
@@ -49,36 +50,53 @@ The overview sestion shows some important values:
 ![alt text](images/web-app-overview.png "web app overview")
 
 2. Metrics
+
 These are the web app metrics
+
 ![alt text](images/web-app-metrics.png "web app metrics")
 
 As a service plan is the compute, this has metrics that are easy to understand like CPU percentage and memory used. These are shared across all apps that use that service plan.
+
 ![alt text](images/service-plan-metrics.png "service plan metrics")
 
 3. Service plan
+
 A service plan is the compute for the web app. It will have a SKU and number of instances. Note that there are Windows and Linux service plans. A service plan can be either Windows or Linux. Not both. 
+
 ![alt text](images/service-plan-overview.png "service plan overview")
 
 4. Scale up and scale out
+
 There are two ways a service plan (and therefore all of the web apps in that plan) can scale - by selecting the SKU or type of underlying compute or the number of instances.
 
 Scaling up is about changing the SKU for a different one. This is not generally ever done in production, but earlier in the lifecycle. Different SKUs have differing capabilities as well as performance. Scaling up generally will cause an interruption of service.
+
 ![alt text](images/service-plan-scale-up.png "service plan scale up")
 
 Scaling out is about changing the number of instances of a service plan. Increasing the number will generally increase the throughput of a web app. A web app meets the app service SLA with a single instance, but it is recommended to have 2 or more instances for production.
 
 Scaling can be done manually or automatically - this can be configured here.
+
 ![alt text](images/service-plan-scale-out.png "service plan scale out")
 
-5. Configuration/General Settings - can see the node version
+5. Configuration/General Settings 
+
+This displays a number of settings. The most interesting ones are:
+* The runtime language and version
+* Whether the web app will stay in memory or be moved out from inactivity
+* ARR Affinity - whether the app service load balancer will route requests to the service plan instance that served the first request from that client. This uses a cookie. 
 
 ![alt text](images/web-app-general.png "web app general settings")
 
 6. Application settings
 
+These show some setting and connection strings that can be pushed down into the application. Thus enabling the removal of settings, credentials or secrets from the application code.
+
 ![alt text](images/web-app-settings.png "web app application settings")
 
 7. Deployment slots
+
+A mechanism to allow safe deployment mechanisms by creating a copy of the web app that can be used in load balanced requests. This can enable blue/green or canary deployments.
 
 ![alt text](images/web-app-deployment.png "web app deployment slots")
 
