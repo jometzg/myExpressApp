@@ -44,23 +44,30 @@ The overview sestion shows some important values:
 * the app service plan name with its SKU and number of instances. This is the compute that runs the web app
 * Location - which region the web app runs in
 * Resource group of the resource
+* Publish profile - this downloads an XML file with the credentials that may be used to authenticate to publish an application into the web app
 
 ![alt text](images/web-app-overview.png "web app overview")
 
 2. Metrics
-
+These are the web app metrics
 ![alt text](images/web-app-metrics.png "web app metrics")
 
+As a service plan is the compute, this has metrics that are easy to understand like CPU percentage and memory used. These are shared across all apps that use that service plan.
 ![alt text](images/service-plan-metrics.png "service plan metrics")
 
 3. Service plan
-
+A service plan is the compute for the web app. It will have a SKU and number of instances. Note that there are Windows and Linux service plans. A service plan can be either Windows or Linux. Not both. 
 ![alt text](images/service-plan-overview.png "service plan overview")
 
 4. Scale up and scale out
+There are two ways a service plan (and therefore all of the web apps in that plan) can scale - by selecting the SKU or type of underlying compute or the number of instances.
 
+Scaling up is about changing the SKU for a different one. This is not generally ever done in production, but earlier in the lifecycle. Different SKUs have differing capabilities as well as performance. Scaling up generally will cause an interruption of service.
 ![alt text](images/service-plan-scale-up.png "service plan scale up")
 
+Scaling out is about changing the number of instances of a service plan. Increasing the number will generally increase the throughput of a web app. A web app meets the app service SLA with a single instance, but it is recommended to have 2 or more instances for production.
+
+Scaling can be done manually or automatically - this can be configured here.
 ![alt text](images/service-plan-scale-out.png "service plan scale out")
 
 5. Configuration/General Settings - can see the node version
